@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Курсы - Личная страница преподавателя</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/courses.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="img/logo.svg" alt="КарТУ">
+                    <span class="logo-text">КарТУ</span>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="courses.html" class="active">Курсы</a></li>
+                        <li><a href="research.html">Научная работа</a></li>
+                        <li><a href="contact.html">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="courses-hero">
+            <div class="container">
+                <h1 class="section-title">Мои курсы</h1>
+                <p class="section-subtitle">Образовательные программы и учебные материалы</p>
+            </div>
+        </section>
+
+        <section class="courses-filter">
+            <div class="container">
+                <div class="filter-wrapper">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Поиск курсов..." id="courseSearch">
+                    </div>
+                    <div class="filter-tabs">
+                        <button class="filter-btn active" data-filter="all">Все курсы</button>
+                        <button class="filter-btn" data-filter="current">Текущие</button>
+                        <button class="filter-btn" data-filter="upcoming">Предстоящие</button>
+                        <button class="filter-btn" data-filter="archived">Архив</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="courses-grid">
+            <div class="container">
+                <div class="courses-wrapper">
+                    <!-- Карточка курса Web-дизайн -->
+                    <div class="course-card" data-category="current">
+                        <div class="course-header">
+                            <div class="course-icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <span class="course-status">Текущий курс</span>
+                        </div>
+                        <div class="course-content">
+                            <h3>Web-дизайн</h3>
+                            <p class="course-description">
+                                Курс посвящен основам веб-дизайна и разработки сайтов. Изучение HTML, CSS, JavaScript и принципов современного дизайна.
+                            </p>
+                            <div class="course-meta">
+                                <div class="meta-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>72 часа</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="fas fa-users"></i>
+                                    <span>ВТ-22-2</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>Весенний семестр</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="course-materials">
+                            <h4>Материалы курса</h4>
+                            <ul>
+                                <li>
+                                    <i class="fas fa-file-pdf"></i>
+                                    <a href="#">Силлабус</a>
+                                </li>
+                                <li>
+                                    <i class="fas fa-book"></i>
+                                    <a href="#">Лекция 1: Введение в Web-дизайн</a>
+                                </li>
+                                <li>
+                                    <i class="fas fa-tasks"></i>
+                                    <a href="#">Практическая работа №1</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="course-actions">
+                            <button class="action-btn primary">
+                                <i class="fas fa-book-reader"></i>
+                                Материалы
+                            </button>
+                            <button class="action-btn secondary">
+                                <i class="fas fa-calendar-alt"></i>
+                                Расписание
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Карточка курса Python -->
+                    <div class="course-card" data-category="current">
+                        <div class="course-header">
+                            <div class="course-icon">
+                                <i class="fas fa-python"></i>
+                            </div>
+                            <span class="course-status">Текущий курс</span>
+                        </div>
+                        <div class="course-content">
+                            <h3>Программирование на Python</h3>
+                            <p class="course-description">
+                                Базовый курс программирования на языке Python. Изучение основных конструкций языка, работа с данными, ООП.
+                            </p>
+                            <div class="course-meta">
+                                <div class="meta-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>100 часов</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="fas fa-users"></i>
+                                    <span>ВТ-22-1</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>Весенний семестр</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="course-materials">
+                            <h4>Материалы курса</h4>
+                            <ul>
+                                <li>
+                                    <i class="fas fa-file-pdf"></i>
+                                    <a href="#">Силлабус</a>
+                                </li>
+                                <li>
+                                    <i class="fas fa-book"></i>
+                                    <a href="#">Лекция 1: Основы Python</a>
+                                </li>
+                                <li>
+                                    <i class="fas fa-tasks"></i>
+                                    <a href="#">Практическая работа №1</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="course-actions">
+                            <button class="action-btn primary">
+                                <i class="fas fa-book-reader"></i>
+                                Материалы
+                            </button>
+                            <button class="action-btn secondary">
+                                <i class="fas fa-calendar-alt"></i>
+                                Расписание
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Предстоящий курс -->
+                    <div class="course-card" data-category="upcoming">
+                        <div class="course-header">
+                            <div class="course-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <span class="course-status upcoming">Скоро</span>
+                        </div>
+                        <div class="course-content">
+                            <h3>UI/UX Дизайн</h3>
+                            <p class="course-description">
+                                Новый курс по проектированию пользовательских интерфейсов и созданию удобных цифровых продуктов.
+                            </p>
+                            <div class="course-meta">
+                                <div class="meta-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>80 часов</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>Осенний семестр</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="course-actions">
+                            <button class="action-btn secondary">
+                                <i class="fas fa-bell"></i>
+                                Уведомить о начале
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> elena.ivanova@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> КарТУ, гл. корпус, кабинет 267</li>
+                        <li><i class="fas fa-clock"></i> Консультации: Вт, Чт 14:00-15:30</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Быстрые ссылки</h3>
+                    <ul>
+                        <li><a href="#">Расписание занятий</a></li>
+                        <li><a href="#">Материалы курсов</a></li>
+                        <li><a href="#">Консультации</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>КарТУ</h3>
+                    <ul>
+                        <li><a href="#">Кафедра ИТБ</a></li>
+                        <li><a href="#">Расписание</a></li>
+                        <li><a href="#">Библиотека</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Личная страница преподавателя КарТУ</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/courses.js"></script>
+</body>
+</html>

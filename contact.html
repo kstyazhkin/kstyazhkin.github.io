@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - Личная страница преподавателя</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="img/logo.svg" alt="КарТУ">
+                    <span class="logo-text">КарТУ</span>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="courses.html">Курсы</a></li>
+                        <li><a href="research.html">Научная работа</a></li>
+                        <li><a href="contact.html" class="active">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero секция -->
+        <section class="contact-hero">
+            <div class="container">
+                <h1 class="section-title">Контакты</h1>
+                <p class="section-subtitle">Свяжитесь со мной для консультации или сотрудничества</p>
+            </div>
+        </section>
+
+        <!-- Основная секция с контактами -->
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <!-- Информационная карточка -->
+                    <div class="contact-info">
+                        <div class="info-card">
+                            <div class="card-header">
+                                <h3>Контактная информация</h3>
+                            </div>
+                            <div class="info-list">
+                                <div class="info-item">
+                                    <i class="fas fa-envelope"></i>
+                                    <div class="item-content">
+                                        <h4>Email:</h4>
+                                        <p>elene.ivanovoy@gmail.com</p>
+                                    </div>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-phone"></i>
+                                    <div class="item-content">
+                                        <h4>Телефон:</h4>
+                                        <p>+7 (700) 000-00-00</p>
+                                    </div>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <div class="item-content">
+                                        <h4>Адрес:</h4>
+                                        <p>КСТУ, кабинет 267</p>
+                                    </div>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-clock"></i>
+                                    <div class="item-content">
+                                        <h4>Консультации:</h4>
+                                        <p>Вторник, Четверг: 14:00-15:30</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="social-links">
+                                <div class="social-links">
+                                    <a href="#" class="social-link" title="Facebook">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a href="#" class="social-link" title="LinkedIn">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Форма обратной связи -->
+                    <div class="contact-form-wrapper">
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-group">
+                                <label for="name">ФИО</label>
+                                <div class="input-wrapper">
+                                    <i class="fas fa-user"></i>
+                                    <input type="text" id="name" name="name" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <div class="input-wrapper">
+                                    <i class="fas fa-envelope"></i>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Тема</label>
+                                <div class="input-wrapper">
+                                    <i class="fas fa-tag"></i>
+                                    <input type="text" id="subject" name="subject" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Сообщение</label>
+                                <div class="input-wrapper">
+                                    <textarea id="message" name="message" required></textarea>
+                                </div>
+                            </div>
+                            <button type="submit" class="submit-btn">
+                                <span>Отправить сообщение</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция с расписанием консультаций -->
+        <section class="schedule-section">
+            <div class="container">
+                <h2 class="section-title">Расписание консультаций</h2>
+                <div class="schedule-grid">
+                    <div class="schedule-card">
+                        <div class="schedule-day">Вторник</div>
+                        <div class="schedule-time">14:00 - 15:30</div>
+                        <div class="schedule-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Кабинет 267
+                        </div>
+                    </div>
+                    <div class="schedule-card">
+                        <div class="schedule-day">Четверг</div>
+                        <div class="schedule-time">14:00 - 15:30</div>
+                        <div class="schedule-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Кабинет 267
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> elena.ivanova@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> КарТУ, гл. корпус, кабинет 267</li>
+                        <li><i class="fas fa-clock"></i> Консультации: Вт, Чт 14:00-15:30</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Быстрые ссылки</h3>
+                    <ul>
+                        <li><a href="courses.html">Курсы</a></li>
+                        <li><a href="research.html">Публикации</a></li>
+                        <li><a href="#">Расписание</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>КарТУ</h3>
+                    <ul>
+                        <li><a href="#">Кафедра ИТБ</a></li>
+                        <li><a href="#">Научный отдел</a></li>
+                        <li><a href="#">Библиотека</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Личная страница преподавателя КарТУ</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/contact.js"></script>
+</body>
+</html>

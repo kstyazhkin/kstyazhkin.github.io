@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Научная деятельность - Личная страница преподавателя</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/research.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="img/logo.svg" alt="КарТУ">
+                    <span class="logo-text">КарТУ</span>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="courses.html">Курсы</a></li>
+                        <li><a href="research.html" class="active">Научная работа</a></li>
+                        <li><a href="contact.html">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero секция -->
+        <section class="research-hero">
+            <div class="container">
+                <h1 class="section-title">Научная деятельность</h1>
+                <p class="section-subtitle">Исследования, публикации и научные проекты</p>
+                <div class="research-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">15+</span>
+                        <span class="stat-label">Публикаций</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">5</span>
+                        <span class="stat-label">Проектов</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">10</span>
+                        <span class="stat-label">Конференций</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция с фильтрами -->
+        <section class="research-filter">
+            <div class="container">
+                <div class="filter-wrapper">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Поиск по публикациям..." id="researchSearch">
+                    </div>
+                    <div class="filter-tabs">
+                        <button class="filter-btn active" data-filter="all">Все</button>
+                        <button class="filter-btn" data-filter="publications">Публикации</button>
+                        <button class="filter-btn" data-filter="projects">Проекты</button>
+                        <button class="filter-btn" data-filter="conferences">Конференции</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция публикаций -->
+        <section class="publications-section" id="publications">
+            <div class="container">
+                <div class="publications-grid">
+                    <!-- Публикация 1 -->
+                    <article class="publication-card" data-category="publications">
+                        <div class="pub-header">
+                            <div class="pub-meta">
+                                <span class="pub-year">2024</span>
+                                <span class="pub-type">Статья</span>
+                            </div>
+                            <div class="pub-status">
+                                <span class="status-badge">Q2</span>
+                            </div>
+                        </div>
+                        <h3>Разработка адаптивных интерфейсов для образовательных платформ</h3>
+                        <p class="pub-authors">Иванова Е.В., Петров А.С.</p>
+                        <p class="pub-journal">Вестник КСТУ, №2(45), с. 23-29</p>
+                        <div class="pub-tags">
+                            <span class="tag">Web-разработка</span>
+                            <span class="tag">UI/UX</span>
+                        </div>
+                        <div class="pub-links">
+                            <a href="#" class="pub-link">
+                                <i class="fas fa-file-pdf"></i>
+                                PDF
+                            </a>
+                            <a href="#" class="pub-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                DOI
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Проект 1 -->
+                    <article class="publication-card project-card" data-category="projects">
+                        <div class="pub-header">
+                            <div class="pub-meta">
+                                <span class="project-status active">Активный</span>
+                            </div>
+                        </div>
+                        <h3>Разработка цифровой образовательной платформы</h3>
+                        <p class="project-period">2023 - 2024</p>
+                        <p class="project-description">
+                            Создание единой цифровой платформы для поддержки образовательного процесса в университете.
+                        </p>
+                        <div class="project-progress">
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 75%"></div>
+                            </div>
+                            <span class="progress-text">75% завершено</span>
+                        </div>
+                    </article>
+
+                    <!-- Конференция 1 -->
+                    <article class="publication-card conference-card" data-category="conferences">
+                        <div class="pub-header">
+                            <div class="pub-meta">
+                                <span class="conf-date">Декабрь 2023</span>
+                            </div>
+                        </div>
+                        <h3>IT в образовании 2023</h3>
+                        <p class="conf-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Астана, Казахстан
+                        </p>
+                        <p class="conf-role">Докладчик</p>
+                        <div class="conf-materials">
+                            <a href="#" class="conf-link">
+                                <i class="fas fa-presentation"></i>
+                                Презентация
+                            </a>
+                            <a href="#" class="conf-link">
+                                <i class="fas fa-file-alt"></i>
+                                Тезисы
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция статистики и метрик -->
+        <section class="research-metrics">
+            <div class="container">
+                <h2 class="section-title">Научные метрики</h2>
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="metric-content">
+                            <h3>h-индекс</h3>
+                            <span class="metric-value">5</span>
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-icon">
+                            <i class="fas fa-quote-right"></i>
+                        </div>
+                        <div class="metric-content">
+                            <h3>Цитирования</h3>
+                            <span class="metric-value">50+</span>
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-icon">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <div class="metric-content">
+                            <h3>Исследования</h3>
+                            <span class="metric-value">10</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> elena.ivanova@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> КарТУ, гл. корпус, кабинет 267</li>
+                        <li><i class="fas fa-clock"></i> Консультации: Вт, Чт 14:00-15:30</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Быстрые ссылки</h3>
+                    <ul>
+                        <li><a href="#">ResearchGate</a></li>
+                        <li><a href="#">Google Scholar</a></li>
+                        <li><a href="#">ORCID</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>КарТУ</h3>
+                    <ul>
+                        <li><a href="#">Научный отдел</a></li>
+                        <li><a href="#">Публикации</a></li>
+                        <li><a href="#">Конференции</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Личная страница преподавателя КарТУ</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/research.js"></script>
+</body>
+</html>

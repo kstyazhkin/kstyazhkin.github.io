@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Иванова Е.В. - Преподаватель КСТУ</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="img/logo.svg" alt="КарТУ">
+                    <span class="university-name">КарТУ</span>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html" class="active">Главная</a></li>
+                        <li><a href="courses.html">Курсы</a></li>
+                        <li><a href="research.html">Научная работа</a></li>
+                        <li><a href="contact.html">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero секция -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="animate-in">Иванова Елена Владимировна</h1>
+                        <p class="subtitle animate-in delay-1">Старший преподаватель кафедры ИТБ</p>
+                        <div class="hero-buttons animate-in delay-2">
+                            <button class="button button-primary" onclick="window.location.href='biography.html'">
+                              <i class="fas fa-user"></i>
+                               Биография
+                               </button>
+                            <a href="courses.html" class="button button-secondary">
+                                <i class="fas fa-book"></i>
+                                Мои курсы
+                            </a>
+                        </div>
+                        <div class="hero-stats animate-in delay-3">
+                            <div class="stat-item">
+                                <span class="stat-number">10+</span>
+                                <span class="stat-label">Лет опыта</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">15+</span>
+                                <span class="stat-label">Публикаций</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">500+</span>
+                                <span class="stat-label">Студентов</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-image animate-in delay-2">
+                        <img src="img/teacher.jpg" alt="Иванова Е.В.">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция специализаций -->
+        <section class="specializations">
+            <div class="container">
+                <h2 class="section-title">Направления деятельности</h2>
+                <div class="specializations-grid">
+                    <div class="specialization-card">
+                        <div class="card-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3>Web-разработка</h3>
+                        <p>Обучение современным технологиям веб-разработки и дизайна</p>
+                    </div>
+                    <div class="specialization-card">
+                        <div class="card-icon">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <h3>Исследования</h3>
+                        <p>Научные исследования в области UX/UI дизайна</p>
+                    </div>
+                    <div class="specialization-card">
+                        <div class="card-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Менторство</h3>
+                        <p>Руководство дипломными и курсовыми работами</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция последних публикаций -->
+        <section class="recent-publications">
+            <div class="container">
+                <h2 class="section-title">Последние публикации</h2>
+                <div class="publications-slider">
+                    <div class="publication-card">
+                        <span class="pub-date">2024</span>
+                        <h3>Разработка адаптивных интерфейсов</h3>
+                        <p>Исследование современных подходов к созданию адаптивных интерфейсов</p>
+                        <a href="#" class="read-more">Читать далее</a>
+                    </div>
+                    <!-- Дополнительные карточки публикаций -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Модальное окно биографии -->
+    <div id="bioModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Биография</h2>
+                <button class="close-modal" onclick="closeBioModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="bio-content">
+                    <img src="img/teacher.jpg" alt="Иванова Е.В." class="bio-image">
+                    <div class="bio-text">
+                        <h3>Образование</h3>
+                        <ul>
+                            <li>
+                                <span class="year">2010</span>
+                                <span class="degree">Магистр компьютерных наук</span>
+                                <span class="institution">КСТУ</span>
+                            </li>
+                            <li>
+                                <span class="year">2008</span>
+                                <span class="degree">Бакалавр информационных технологий</span>
+                                <span class="institution">КСТУ</span>
+                            </li>
+                        </ul>
+                        
+                        <h3>Опыт работы</h3>
+                        <ul>
+                            <li>
+                                <span class="year">2015 - настоящее время</span>
+                                <span class="position">Старший преподаватель</span>
+                                <span class="institution">Кафедра ИТБ, КСТУ</span>
+                            </li>
+                            <li>
+                                <span class="year">2010 - 2015</span>
+                                <span class="position">Преподаватель</span>
+                                <span class="institution">Кафедра ИТБ, КСТУ</span>
+                            </li>
+                        </ul>
+
+                        <h3>Достижения</h3>
+                        <ul class="achievements">
+                            <li>Автор более 15 научных публикаций</li>
+                            <li>Участник международных конференций</li>
+                            <li>Руководитель студенческих проектов</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> elena.ivanova@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> КарТУ, гл. корпус, кабинет 267</li>
+                        <li><i class="fas fa-clock"></i> Консультации: Вт, Чт 14:00-15:30</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Быстрые ссылки</h3>
+                    <ul>
+                        <li><a href="#">Расписание занятий</a></li>
+                        <li><a href="#">Публикации</a></li>
+                        <li><a href="#">Консультации</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>КарТУ</h3>
+                    <ul>
+                        <li><a href="#">Кафедра ИТБ</a></li>
+                        <li><a href="#">Научный отдел</a></li>
+                        <li><a href="#">Библиотека</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Личная страница преподавателя КарТУ</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/index.js"></script>
+</body>
+</html>
