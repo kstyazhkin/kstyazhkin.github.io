@@ -91,48 +91,4 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-    // Функция для открытия модального окна с публикацией
-    function openPublicationModal(publicationId) {
-        const modal = document.getElementById('publicationModal');
-        const modalTitle = document.getElementById('modalTitle');
-        const modalDate = document.getElementById('modalDate');
-        const modalContent = document.getElementById('modalContent');
 
-        // Пример данных для публикаций (можно заменить на реальные данные)
-        const publications = {
-            pub1: {
-                title: "Разработка адаптивных интерфейсов",
-                date: "2024",
-                content: "Исследование современных подходов к созданию адаптивных интерфейсов. В статье рассматриваются основные принципы адаптивного дизайна, а также примеры их применения в реальных проектах."
-            },
-            pub2: {
-                title: "UX/UI дизайн для мобильных приложений",
-                date: "2023",
-                content: "Анализ лучших практик в дизайне мобильных интерфейсов. В статье обсуждаются ключевые аспекты создания удобных и интуитивно понятных мобильных приложений."
-            },
-            pub3: {
-                title: "Влияние цвета на пользовательский опыт",
-                date: "2023",
-                content: "Исследование влияния цветовых схем на восприятие пользователей. В статье рассматриваются психологические аспекты выбора цветов для интерфейсов."
-            },
-            pub4: {
-                title: "Интерактивные элементы в веб-дизайне",
-                date: "2022",
-                content: "Изучение эффективности интерактивных элементов в пользовательских интерфейсах. В статье приводятся примеры успешного использования интерактивных элементов."
-            }
-        };
-
-        const publication = publications[publicationId];
-
-        modalTitle.textContent = publication.title;
-        modalDate.textContent = `Дата публикации: ${publication.date}`;
-        modalContent.textContent = publication.content;
-
-        modal.classList.add('active');
-    }
-
-    // Функция для закрытия модального окна
-    function closePublicationModal() {
-        const modal = document.getElementById('publicationModal');
-        modal.classList.remove('active');
-    }
