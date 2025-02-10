@@ -101,21 +101,50 @@
         </section>
 
         <!-- Секция последних публикаций -->
-        <section class="recent-publications">
-            <div class="container">
-                <h2 class="section-title">Последние публикации</h2>
-                <div class="publications-slider">
-                    <div class="publication-card">
-                        <span class="pub-date">2024</span>
-                        <h3>Разработка адаптивных интерфейсов</h3>
-                        <p>Исследование современных подходов к созданию адаптивных интерфейсов</p>
-                        <a href="#" class="read-more">Читать далее</a>
-                    </div>
-                    <!-- Дополнительные карточки публикаций -->
-                </div>
+<section class="recent-publications">
+    <div class="container">
+        <h2 class="section-title">Последние публикации</h2>
+        <div class="publications-slider">
+            <!-- Публикация 1 -->
+            <div class="publication-card" onclick="openPublicationModal('pub1')">
+                <span class="pub-date">2024</span>
+                <h3>Разработка адаптивных интерфейсов</h3>
+                <p>Исследование современных подходов к созданию адаптивных интерфейсов</p>
+                <a href="#" class="read-more">Читать далее</a>
             </div>
-        </section>
-    </main>
+            <!-- Публикация 2 -->
+            <div class="publication-card" onclick="openPublicationModal('pub2')">
+                <span class="pub-date">2023</span>
+                <h3>UX/UI дизайн для мобильных приложений</h3>
+                <p>Анализ лучших практик в дизайне мобильных интерфейсов</p>
+                <a href="#" class="read-more">Читать далее</a>
+            </div>
+            <!-- Публикация 3 -->
+            <div class="publication-card" onclick="openPublicationModal('pub3')">
+                <span class="pub-date">2023</span>
+                <h3>Влияние цвета на пользовательский опыт</h3>
+                <p>Исследование влияния цветовых схем на восприятие пользователей</p>
+                <a href="#" class="read-more">Читать далее</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Модальное окно для публикаций -->
+<div id="publicationModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2 id="modalTitle">Название публикации</h2>
+            <button class="close-modal" onclick="closePublicationModal()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="modal-body">
+            <p id="modalDate">Дата публикации</p>
+            <p id="modalContent">Содержание публикации...</p>
+        </div>
+    </div>
+</div>
 
     <!-- Модальное окно биографии -->
     <div id="bioModal" class="modal">
