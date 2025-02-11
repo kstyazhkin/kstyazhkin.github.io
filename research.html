@@ -6,6 +6,7 @@
     <title>Научная деятельность - Личная страница преподавателя</title>
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/research.css">
+    <link rel="stylesheet" href="styles/research-activity.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -187,6 +188,30 @@
                 </div>
             </div>
         </section>
+
+        <section class="research-activity">
+            <div class="container">
+                <h2 class="section-title">Научная активность</h2>
+                <div class="chart-container">
+                    <div class="chart-controls">
+                        <div class="chart-type-selector">
+                            <button class="chart-btn active" data-type="publications">Публикации</button>
+                            <button class="chart-btn" data-type="citations">Цитирования</button>
+                            <button class="chart-btn" data-type="projects">Проекты</button>
+                        </div>
+                        <div class="year-selector">
+                            <button class="year-btn" data-period="all">Все время</button>
+                            <button class="year-btn active" data-period="5">5 лет</button>
+                            <button class="year-btn" data-period="3">3 года</button>
+                        </div>
+                    </div>
+                    <div class="chart-wrapper">
+                        <canvas id="activityChart"></canvas>
+                    </div>
+                    <div class="chart-legend"></div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -224,5 +249,8 @@
     </footer>
 
     <script src="js/research.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/research-activity.js"></script>
+
 </body>
 </html>
