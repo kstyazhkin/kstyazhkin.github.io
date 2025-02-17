@@ -978,4 +978,18 @@ footer {
     margin-bottom: 1rem;
 }
 
+/* Дополнительное оформление кнопки "Сертификаты" в секции hero */
+.hero-buttons a[href="certificates.html"] {
+    background: var(--secondary);
+    color: var(--light);
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.hero-buttons a[href="certificates.html"]:hover {
+    background: #303030;
+    transform: translateY(-2px);
+}
 

@@ -1,0 +1,200 @@
+/* ====== Certificates Hero Section ====== */
+.certificates-hero {
+    background: linear-gradient(135deg, rgba(139, 0, 0, 0.05) 0%, rgba(255, 215, 0, 0.05) 100%);
+    padding: 4rem 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.certificates-hero .section-title {
+    font-size: 2.5rem;
+    color: var(--secondary);
+    margin-bottom: 1rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.certificates-hero .section-subtitle {
+    font-size: 1.2rem;
+    color: var(--text);
+    opacity: 0.8;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* ====== Certificates Content Section ====== */
+.certificates-content {
+    padding: 4rem 0;
+}
+
+/* Сетка сертификатов: немного увеличили min-width, чтобы карточки были крупнее */
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    /* Можно добавить дополнительную «обёртку» или фон, если хочется */
+}
+
+/* ====== Certificate Card Styles ====== */
+.certificate-card {
+    position: relative;
+    background: #ffffff; /* или var(--light) */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрируем содержимое */
+    text-align: center;
+    padding-bottom: 1.5rem; /* Добавим отступ снизу */
+}
+
+/* При наведении немного сильнее «поднимаем» карточку */
+.certificate-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Уменьшаем ширину картинки, чтобы она не растягивалась на всю карточку */
+.certificate-card img {
+    width: 80%;
+    max-width: 300px; /* Ограничиваем максимальную ширину */
+    height: auto;
+    margin-top: 1rem;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+/* Лёгкий эффект при наведении на картинку (необязательно) */
+.certificate-card:hover img {
+    transform: scale(1.03);
+}
+
+/* Заголовок сертификата */
+.certificate-card h3 {
+    font-size: 1.4rem;
+    color: var(--secondary);
+    margin: 1rem 1rem 0.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+/* Текстовое описание сертификата */
+.certificate-card p {
+    font-size: 1rem;
+    color: #666;
+    margin: 0 1rem 1rem;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+}
+
+/* Анимация появления карточек при скролле (используется в certificates.js) */
+.certificate-card {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.certificate-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* ====== Стили для модального окна сертификата ====== */
+.certificate-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+}
+
+.certificate-modal.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.certificate-modal .modal-content {
+    background: var(--light);
+    border-radius: 15px;
+    overflow: hidden;
+    max-width: 90%;
+    max-height: 90%;
+    position: relative;
+    animation: modalFadeIn 0.3s ease forwards;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    /* Можно добавить внутренние отступы, если нужно */
+}
+
+@keyframes modalFadeIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.certificate-modal .close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 2rem;
+    color: var(--secondary);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.certificate-modal .close-modal:hover {
+    color: var(--primary);
+}
+
+/* При необходимости стилизуйте внутренние элементы модального окна:
+   Например, можно увеличить картинку и т.д. */
+.certificate-modal img {
+    width: 80%;
+    max-width: 500px;
+    border-radius: 12px;
+    margin: 2rem auto 1rem;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .certificates-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .certificate-card {
+        padding-bottom: 1rem;
+    }
+    
+    .certificate-card h3 {
+        font-size: 1.2rem;
+    }
+}
+
+/* По умолчанию скрываем на странице */
+.hidden-modal-content {
+    display: none;
+}
+
+/* В модальном окне отображаем */
+.certificate-modal .hidden-modal-content {
+    display: block;
+}
+
